@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nenxanh"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listviewMonHoc"
+        android:layout_width="405dp"
+        android:layout_height="430dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThem"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <EditText
+        android:id="@+id/editTextMonHoc"
+        android:layout_width="361dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Nhập môn học:"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textColorHint="@android:color/holo_red_dark"
+        android:textColorLink="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonThem"
+        android:layout_width="133dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="THÊM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMonHoc" />
+
+    <Button
+        android:id="@+id/buttonCapNhat"
+        android:layout_width="158dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="CẬP NHẬT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMonHoc" />
+</androidx.constraintlayout.widget.ConstraintLayout>
