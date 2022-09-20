@@ -1,7 +1,9 @@
 package com.example.huynhthihaihau_th_tuan5_taolist;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,18 +30,37 @@ public class MainActivity extends AppCompatActivity {
 
         lvMenu.setAdapter(adapter);
 
+
         lvMenu.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "Bạn vừa xóa: " + arrayMenu.get(position), Toast.LENGTH_SHORT).show();
-                arrayMenu.remove(position);
-                adapter.notifyDataSetChanged();
-                //doOpenDetailActivity();
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long id) {
+                XacNhanXoa(i);
                 return false;
             }
 
         });
 
+    }
+    private void XacNhanXoa(int position ){
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Thông báo!");
+        alertDialog.setIcon(R.mipmap.ic_launcher);
+        alertDialog.setMessage("Bạn có muốn xóa món ăn này ra khỏi menu không?");
+        alertDialog.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                arrayMenu.remove(position);
+                adapter.notifyDataSetChanged();
+
+            }
+        });
+        alertDialog.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        alertDialog.show();
     }
 
     private void AnhXa(){
@@ -52,11 +73,4 @@ public class MainActivity extends AppCompatActivity {
         arrayMenu.add(new Menu("Thịt nướng","Đặc sản thịt nướng mè",R.drawable.thitnuong));
         arrayMenu.add(new Menu("Sushi","Sushi cá hồi",R.drawable.sushi));
     }
-
-    /*public void doOpenDetailActivity()
-    {
-        Intent myIntent=new Intent(this, DetailActivity.class);
-        startActivity(myIntent);
-    }*/
-
 }
