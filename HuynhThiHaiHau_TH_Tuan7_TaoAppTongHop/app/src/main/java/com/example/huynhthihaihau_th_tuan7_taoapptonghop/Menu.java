@@ -9,6 +9,7 @@ public class Menu {
         Ten = ten;
         MoTa = moTa;
         Hinh = hinh;
+
     }
 
     public String getTen() {

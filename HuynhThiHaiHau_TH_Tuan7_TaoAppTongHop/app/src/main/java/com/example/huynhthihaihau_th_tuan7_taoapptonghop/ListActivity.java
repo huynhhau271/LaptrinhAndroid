@@ -1,5 +1,7 @@
 package com.example.huynhthihaihau_th_tuan7_taoapptonghop;
 
+
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
@@ -69,8 +71,8 @@ public class ListActivity extends AppCompatActivity {
         arrayMenu.add(new Menu("Phở Hà Nội", "Tinh hoa ẩm thực đất Bắc", R.drawable.phohanoi));
         arrayMenu.add(new Menu("Bò bít tết", "Bò bít tết ngon tuyệt", R.drawable.bobittet));
         arrayMenu.add(new Menu("Salat", "Món ăn kiểu Pháp", R.drawable.salat));
-        arrayMenu.add(new Menu("Pizza", "Thức ăn nhanh - đơn giản", R.drawable.pizza));
-        arrayMenu.add(new Menu("Thịt nướng", "Đặc sản thịt nướng mè", R.drawable.thitnuong));
+        arrayMenu.add(new Menu("Pizza", "Thức ăn nhanh - đơn giản", R.drawable.pizzaa));
+        arrayMenu.add(new Menu("Thịt nướng", "Đặc sản thịt nướng mè", R.drawable.thitnuong1));
         arrayMenu.add(new Menu("Sushi", "Sushi cá hồi", R.drawable.sushi));
     }
 }
