@@ -68,11 +68,11 @@ public class ListActivity extends AppCompatActivity {
     private void AnhXa() {
         lvMenu = (ListView) findViewById(R.id.ListviewMenu);
         arrayMenu = new ArrayList<>();
-        arrayMenu.add(new Menu("Phở Hà Nội", "Tinh hoa ẩm thực đất Bắc", R.drawable.phohanoi));
-        arrayMenu.add(new Menu("Bò bít tết", "Bò bít tết ngon tuyệt", R.drawable.bobittet));
-        arrayMenu.add(new Menu("Salat", "Món ăn kiểu Pháp", R.drawable.salat));
-        arrayMenu.add(new Menu("Pizza", "Thức ăn nhanh - đơn giản", R.drawable.pizzaa));
-        arrayMenu.add(new Menu("Thịt nướng", "Đặc sản thịt nướng mè", R.drawable.thitnuong1));
-        arrayMenu.add(new Menu("Sushi", "Sushi cá hồi", R.drawable.sushi));
+        arrayMenu.add(new Menu("Phở Hà Nội", "Tinh hoa ẩm thực đất Bắc","25.000 VNĐ", R.drawable.phohanoi));
+        arrayMenu.add(new Menu("Bò bít tết", "Bò bít tết ngon tuyệt","60.000 VNĐ", R.drawable.bobittet));
+        arrayMenu.add(new Menu("Salat", "Món ăn kiểu Pháp","30.000 VNĐ", R.drawable.salat));
+        arrayMenu.add(new Menu("Pizza", "Thức ăn nhanh - đơn giản","120.000 VNĐ", R.drawable.pizzaa));
+        arrayMenu.add(new Menu("Thịt nướng", "Đặc sản thịt nướng mè","50.000 VNĐ", R.drawable.thitnuong1));
+        arrayMenu.add(new Menu("Sushi", "Sushi cá hồi","45.000 VNĐ", R.drawable.sushi));
     }
 }

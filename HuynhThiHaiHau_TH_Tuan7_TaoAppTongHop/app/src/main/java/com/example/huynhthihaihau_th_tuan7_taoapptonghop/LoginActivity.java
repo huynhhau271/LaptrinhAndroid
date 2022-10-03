@@ -22,9 +22,18 @@ public class LoginActivity extends AppCompatActivity {
         TextView username = (TextView) findViewById(R.id.userName);
         TextView password = (TextView) findViewById(R.id.passWord);
         MaterialButton signup = (MaterialButton) findViewById(R.id.signupbt);
+        signup.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(LoginActivity.this, "PROFILE OPEN!", Toast.LENGTH_SHORT).show();
+                doOpenSignupActivity();
+            }
+        });
+
 
         MaterialButton logninbtn = (MaterialButton) findViewById(R.id.loginbtn);
-
         logninbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,11 +49,15 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
     public void doOpenMainActivity()
     {
         Intent myIntent=new Intent(this, MainActivity.class);
         startActivity(myIntent);
     }
 
+    public void doOpenSignupActivity()
+    {
+        Intent myIntent=new Intent(this, SignupActivity.class);
+        startActivity(myIntent);
+    }
 }

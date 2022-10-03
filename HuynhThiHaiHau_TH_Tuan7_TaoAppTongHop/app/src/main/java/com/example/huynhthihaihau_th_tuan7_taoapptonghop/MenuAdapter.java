@@ -44,14 +44,17 @@ public class MenuAdapter extends BaseAdapter{
         //anh xa view
         TextView txtwTen = (TextView) view.findViewById(R.id.txtTen);
         TextView txtwMoTa = (TextView) view.findViewById(R.id.txtMoTa);
+        TextView txtwTien = (TextView) view.findViewById(R.id.txtTien);
         ImageView imagHinh = (ImageView) view.findViewById(R.id.imgHinh);
 
         //gan gia tri
         Menu menu = menuList.get(i);
         txtwTen.setText(menu.getTen());
         txtwMoTa.setText(menu.getMoTa());
+        txtwTien.setText(menu.getTien());
         imagHinh.setImageResource(menu.getHinh());
         return view;
     }
 }
+
 
