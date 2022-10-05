@@ -22,7 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ProfileActivity.this, android.R.style.Theme_DeviceDefault_Light_Dialog);
-                builder.setTitle("Bạn có chắc chắn muốn thoát khỏi trang này không? ");
+                builder.setTitle("Bạn có chắc chắn muốn thoát khỏi trang này không?");
                 builder.setIcon(android.R.drawable.ic_dialog_alert);
                 builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
