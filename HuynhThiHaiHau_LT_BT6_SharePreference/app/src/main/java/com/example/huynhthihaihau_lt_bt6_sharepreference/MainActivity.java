@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 if (edtUsername.getText().toString().equals("admin") && edtPassword.getText().toString().equals("admin")) {
                     //thông báo đăng nhập thành công
                     Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                    //nếu có check
+                    //nếu có checked
                     if(cbRemember.isChecked()){
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("TaiKhoan", edtusername);

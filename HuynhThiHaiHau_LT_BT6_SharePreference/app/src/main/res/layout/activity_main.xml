@@ -143,5 +143,4 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="italic" />
-
 </RelativeLayout>
