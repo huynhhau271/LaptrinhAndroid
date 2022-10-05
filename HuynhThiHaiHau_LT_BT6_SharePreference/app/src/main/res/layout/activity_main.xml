@@ -7,8 +7,8 @@
     android:background="@drawable/hinhnen3"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/signIn"
+    <TextView
+        android:id="@+id/txtLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -25,8 +25,8 @@
         android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signIn"
-        android:layout_marginStart="40dp"
+        android:layout_below="@+id/txtLogin"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/userName"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -56,8 +56,8 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginbtn"
+    <Button
+        android:id="@+id/btlogin"
         android:layout_width="117dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/passWord"
@@ -116,11 +116,11 @@
 
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/signupbt"
         android:layout_width="143dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/forgotpass"
+        android:layout_below="@id/cbRemember"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="137dp"
@@ -130,7 +130,7 @@
         android:text="SIGN UP" />
 
     <CheckBox
-        android:id="@+id/forgotpass"
+        android:id="@+id/cbRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
