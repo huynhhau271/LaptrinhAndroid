@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
@@ -24,28 +23,12 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
         AnhXa();
-
         adapter = new MenuAdapter(this, R.layout.dong_menu, arrayMenu);
 
         lvMenu.setAdapter(adapter);
 
 
-        lvMenu.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long id) {
-                doOpenDetailActivity();
-                return false;
-            }
-        });
-
-        lvMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                XacNhanXoa(i);
-            }
-        });
     }
 
     private void XacNhanXoa(int position) {
@@ -80,10 +63,26 @@ public class ListActivity extends AppCompatActivity {
         arrayMenu.add(new Menu("Pizza", "Thức ăn nhanh - đơn giản","120.000 VNĐ", R.drawable.pizzaa));
         arrayMenu.add(new Menu("Thịt nướng", "Đặc sản thịt nướng mè","50.000 VNĐ", R.drawable.thitnuong1));
         arrayMenu.add(new Menu("Sushi", "Sushi cá hồi","45.000 VNĐ", R.drawable.sushi));
+
+        lvMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Menu fr = arrayMenu.get(i);
+                doOpenMainActivity(fr.getTen(),fr.getMoTa(),fr.getHinh());
+            }
+        });
     }
-    public void doOpenDetailActivity()
+
+
+    public void doOpenMainActivity(String ten, String mota, int hinh)
     {
-        Intent myIntent=new Intent(this, DetailActivity.class);
+        Intent myIntent;
+        myIntent = new Intent( this, Detail.class);
+        myIntent.putExtra("title",ten);
+        myIntent.putExtra("des",mota);
+        myIntent.putExtra("image",hinh);
         startActivity(myIntent);
     }
+
+
 }

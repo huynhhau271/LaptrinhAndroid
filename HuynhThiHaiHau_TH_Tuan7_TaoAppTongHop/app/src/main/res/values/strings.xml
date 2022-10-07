@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop</string>
+
+    <string name="menu_open">Open</string>
+    <string name="menu_close">Close</string>
 </resources>

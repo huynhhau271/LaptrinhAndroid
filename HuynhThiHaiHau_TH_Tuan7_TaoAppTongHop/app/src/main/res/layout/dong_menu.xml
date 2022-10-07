@@ -6,9 +6,9 @@
 
     <ImageView
         android:id="@+id/imgHinh"
-        android:padding="9dp"
         android:layout_width="120dp"
-        android:layout_height="120dp"/>
+        android:layout_height="120dp"
+        android:padding="9dp" />
 
     <TextView
         android:id="@+id/txtTen"
