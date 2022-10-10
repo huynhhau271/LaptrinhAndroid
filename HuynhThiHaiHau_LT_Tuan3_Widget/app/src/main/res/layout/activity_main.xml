@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="@drawable/caro"
@@ -28,13 +28,13 @@
 
     <SeekBar
         android:id="@+id/seekbarOne"
-        android:progressDrawable="@android:color/transparent"
         android:layout_width="678dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="118dp"
         android:layout_toRightOf="@id/checkboxThree"
+        android:progressDrawable="@android:color/transparent"
         android:thumb="@drawable/icon1" />
 
     <SeekBar
@@ -60,6 +60,7 @@
         android:thumb="@drawable/icon3" />
 
     <ImageView
+        android:id="@+id/imgAnimal"
         android:layout_width="297dp"
         android:layout_height="96dp"
         android:layout_centerHorizontal="true"
@@ -76,14 +77,14 @@
 
     <ImageButton
         android:id="@+id/buttonPlay"
-        android:layout_width="254dp"
-        android:layout_height="107dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAnimal"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="238dp"
-        android:layout_marginEnd="239dp"
-        android:layout_marginBottom="131dp"
-        android:background="@null"
-        android:src="@drawable/nutplay" />
+        android:layout_marginStart="186dp"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="151dp"
+        app:srcCompat="@drawable/playbutton" />
+
 </RelativeLayout>

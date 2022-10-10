@@ -2,6 +2,7 @@ package com.example.huynhthihaihau_lt_tuan3_widget;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cbOne, cbTwo, cbThree;
     SeekBar skOne, skTwo, skThree;
     int soDiem = 100;
+    SharedPreferences luuDiemSo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,14 @@ public class MainActivity extends AppCompatActivity {
         skTwo.setEnabled(false);
         skThree.setEnabled(false);
 
+        luuDiemSo = (SharedPreferences) getSharedPreferences("DiemSoGame",MODE_PRIVATE);
+        //get diem so
+
+        soDiem = luuDiemSo.getInt("Diem", 100);
+
         txtDiem.setText(soDiem + "");
+
+
 
         final CountDownTimer countDownTimer = new CountDownTimer(60000,300) {
             @Override
@@ -50,9 +59,11 @@ public class MainActivity extends AppCompatActivity {
                     //Kiểm tra có đặt cược không?
                     if (cbOne.isChecked()){
                         soDiem += 10;
+                        LuuDiemGame();
                         Toast.makeText(MainActivity.this, "Bạn đoán chính xác!", Toast.LENGTH_SHORT).show();
                     }else{
                         soDiem -= 5;
+                        LuuDiemGame();
                         Toast.makeText(MainActivity.this, "Bạn đoán sai rồi!", Toast.LENGTH_SHORT).show();
                     }
                     txtDiem.setText(soDiem + "");
@@ -66,9 +77,11 @@ public class MainActivity extends AppCompatActivity {
                     //Kiểm tra có đặt cược không?
                     if (cbTwo.isChecked()){
                         soDiem += 10;
+                        LuuDiemGame();
                         Toast.makeText(MainActivity.this, "Bạn đoán chính xác!", Toast.LENGTH_SHORT).show();
                     }else{
                         soDiem -= 5;
+                        LuuDiemGame();
                         Toast.makeText(MainActivity.this, "Bạn đoán sai rồi!", Toast.LENGTH_SHORT).show();
                     }
                     txtDiem.setText(soDiem + "");
@@ -82,9 +95,11 @@ public class MainActivity extends AppCompatActivity {
                     //Kiểm tra có đặt cược không?
                     if (cbThree.isChecked()){
                         soDiem += 10;
+                        LuuDiemGame();
                         Toast.makeText(MainActivity.this, "Bạn đoán chính xác!", Toast.LENGTH_SHORT).show();
                     }else{
                         soDiem -= 5;
+                        LuuDiemGame();
                         Toast.makeText(MainActivity.this, "Bạn đoán sai rồi!", Toast.LENGTH_SHORT).show();
                     }
                     txtDiem.setText(soDiem + "");
@@ -168,5 +183,11 @@ public class MainActivity extends AppCompatActivity {
         skOne       = (SeekBar) findViewById(R.id.seekbarOne);
         skTwo       = (SeekBar) findViewById(R.id.seekbarTwo);
         skThree     = (SeekBar) findViewById(R.id.seekbarThree);
+
+    }
+    private void LuuDiemGame(){
+        SharedPreferences.Editor editor = luuDiemSo.edit();
+        editor.putInt("Diem", soDiem);
+        editor.commit();
     }
 }
