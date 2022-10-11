@@ -30,7 +30,6 @@ public class EmployeeDao {
             emp.setSalary(cursor.getFloat(cursor.getColumnIndex("salary")));
 
             list.add(emp);
-
         }
         return list;
 
@@ -39,7 +38,6 @@ public class EmployeeDao {
         String sql = "SELECT * FROM nhanvien";
 
         return get(sql);
-
     }
     public  Employee getById(String id){
         String sql = "SELECT * FROM nhanvien WHERE id = ?";
