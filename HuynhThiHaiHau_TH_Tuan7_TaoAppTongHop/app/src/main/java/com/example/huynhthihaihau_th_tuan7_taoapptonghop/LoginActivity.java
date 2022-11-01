@@ -14,6 +14,8 @@ import com.google.android.material.button.MaterialButton;
 import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
+    DBHelper DB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         TextView username = (TextView) findViewById(R.id.userName);
         TextView password = (TextView) findViewById(R.id.passWord);
         MaterialButton signup = (MaterialButton) findViewById(R.id.signupbt);
+        DB = new DBHelper(this);
         signup.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -37,13 +40,28 @@ public class LoginActivity extends AppCompatActivity {
         logninbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
-                    //thông báo đăng nhập thành công
-                    Toast.makeText(LoginActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                    doOpenMainActivity();
-                } else
-                    //thông báo đăng nhập thất bại
-                    Toast.makeText(LoginActivity.this, "LOGIN FAILED !!!", Toast.LENGTH_SHORT).show();
+//                if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+//                    //thông báo đăng nhập thành công
+//                    Toast.makeText(LoginActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+//                    doOpenMainActivity();
+//                } else
+//                    //thông báo đăng nhập thất bại
+//                    Toast.makeText(LoginActivity.this, "LOGIN FAILED !!!", Toast.LENGTH_SHORT).show();
+                String username1 = username.getText().toString();
+                String password1 = password.getText().toString();
+                if(username1.equals("") || password1.equals(""))
+                    Toast.makeText(LoginActivity.this, "PLEASE ENTER ALL THE FIELDS!!!", Toast.LENGTH_SHORT).show();
+                else{
+                    Boolean checkuserpass = DB.checkusernamepassword(username1, password1);
+                    if(checkuserpass == true){
+                        Toast.makeText(LoginActivity.this, "LOGIN SUCCESSFULLY", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(LoginActivity.this, "LOGIN FAILED!!!", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
             }
         });
