@@ -8,17 +8,21 @@
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/drawable/grey_background.xml" value="0.181" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/drawable/top_background.xml" value="0.181" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/drawable/white_background.xml" value="0.181" />
+        <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_add_or_edit.xml" value="0.1721014492753623" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_detail1.xml" value="0.2" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_detail2.xml" value="0.2" />
+        <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_edit.xml" value="0.1721014492753623" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_list.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_profile.xml" value="0.15" />
+        <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_profile.xml" value="0.22" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/dong_menu.xml" value="0.25" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/header_menu.xml" value="0.2" />
+        <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/layout_nhanvien_item.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/layout/layout_sinhvien_item.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/PC/Desktop/LaptrinhAndroid/HuynhThiHaiHau_TH_Tuan7_TaoAppTongHop/app/src/main/res/menu/main_menu.xml" value="0.19895833333333332" />
       </map>
     </option>

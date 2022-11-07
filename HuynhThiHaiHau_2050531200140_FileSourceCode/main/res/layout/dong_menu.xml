@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgHinh"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="9dp" />
+
+    <TextView
+        android:id="@+id/txtTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgHinh"
+        android:text="Tên"
+        android:textColor="#FB0000"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtMoTa"
+        android:layout_marginTop="10dp"
+        android:textColor="#0048FF"
+        android:layout_below="@id/txtTen"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/imgHinh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtTien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="76dp"
+        android:textAlignment="viewStart"
+        android:textColor="#232121"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="342dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/shoppingcart1" />
+
+    <ImageView
+        android:id="@+id/imgTien"
+        android:layout_width="51dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="81dp"
+
+        android:layout_marginEnd="237dp"
+        app:srcCompat="@drawable/moneybag" />
+
+
+</RelativeLayout>
