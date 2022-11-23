@@ -43,7 +43,6 @@ public class AddOrEditActivity extends AppCompatActivity implements View.OnClick
         edtnvid.setText(sv.getId());
         edtname.setText(sv.getName());
         edtluong.setText(""+ sv.getLuong());
-
         btnluu.setText("Chỉnh sửa");
     }
     //phương thuc nay co the goi su kien onclick cho cac button

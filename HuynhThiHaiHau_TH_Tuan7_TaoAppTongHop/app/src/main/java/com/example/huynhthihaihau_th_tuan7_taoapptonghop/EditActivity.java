@@ -80,7 +80,6 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
                 nhanvienDao dao = new nhanvienDao(this);//tạo đoi tuong goi ham delete
                 dao.delete(nhanvienid);
                 nhanvienid = null;
-
                 Toast.makeText(this, "Da xoa nhan vien!", Toast.LENGTH_SHORT).show();
                 break;
         }
